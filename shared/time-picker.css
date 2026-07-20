@@ -10,3 +10,9 @@
 .cc-tp-btn:hover{background:var(--sur2);color:var(--ac);}
 .cc-tp-btn svg{width:18px;height:18px;}
 .cc-tp-val{font-size:22px;font-weight:600;color:var(--tx);font-family:var(--font);min-width:44px;text-align:center;font-variant-numeric:tabular-nums;user-select:none;}
+/* Touch: taller stepper buttons on phones (fat-finger) */
+@media (max-width:640px){
+  .cc-time-pop{width:320px;}
+  .cc-tp-btn{width:52px;height:40px;}
+  .cc-tp-btn svg{width:20px;height:20px;}
+}
