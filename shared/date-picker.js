@@ -121,10 +121,17 @@
   function positionUnder(anchor){
     var pop = ensure();
     var r = anchor.getBoundingClientRect();
-    var popW = 280;
+    var popW = pop.offsetWidth || 280;
+    var popH = pop.offsetHeight || 320;
     var left = Math.max(8, Math.min(r.left, window.innerWidth - popW - 8));
+    // Vertical clamp: flip above the anchor if it would spill below the viewport.
+    var top = r.bottom + 6;
+    if(top + popH > window.innerHeight - 8){
+      var above = r.top - popH - 6;
+      top = above >= 8 ? above : Math.max(8, window.innerHeight - popH - 8);
+    }
     pop.style.left = left + 'px';
-    pop.style.top  = (r.bottom + 6) + 'px';
+    pop.style.top  = top + 'px';
   }
 
   w.CCDatePicker = {
