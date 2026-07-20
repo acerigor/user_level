@@ -137,6 +137,7 @@
   .dialer-panel{width:100%;right:-100%;box-shadow:none;border-left:none;z-index:1600;}
   .dialer-panel.open{right:0;}
   .dialer-header{padding:14px 16px;}
-  .dialer-close{width:40px;height:40px;border-radius:8px;}
+  .dialer-close{width:44px;height:44px;border-radius:8px;}
+  .dialer-contact-clear{width:40px;height:40px;}
   .dialer-title{font-size:16px;}
 }
